@@ -1,4 +1,7 @@
 // Template Literals in JavaScript
+// This repository provides a comprehensive overview of template literals in JavaScript, including core concepts, practical examples, and common corner cases. Template literals are a powerful feature that enhance string manipulation, allowing for embedded expressions, multi-line strings, and tagged templates.
+
+// Template Literals in JavaScript
 // Template Literals is a way of using expresssions in strings
 // 1. Basic Syntax
 // Enclosed by backticks (``), not single or double quotes.
