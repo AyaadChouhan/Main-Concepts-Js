@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Practice Template Literals</h1>
+    <div id="mainDiv"></div>
+    <button id="btn">CLICK</button>
+    <ul>
+      <li></li>
+    </ul>
+  </body>
+  <script>
+    const arr = ["js", "JQuery", "Node.Js"];
+    const header = "Learning MERN Stack";
+    let doc = `<h2>${header}</h2><ul>`;
+
+    for (const val of arr) {
+      doc += `<li>${val}</li>`;
+    }
+    // doc += `</ul>`
+    // const result = tag`${arr}`;
+    const div = document.getElementById("mainDiv");
+    div.innerHTML = doc;
+  </script>
+</html>
