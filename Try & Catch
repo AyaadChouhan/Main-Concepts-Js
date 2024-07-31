@@ -28,7 +28,7 @@ try { // it is saved us to blocking our code a and saves us to the code blocking
 // Try Block: You put the code that might throw an error inside the try block. If everything works fine, the code in the catch block is skipped.
 
 // Catch Block: If an error occurs in the try block, the code inside the catch block runs. This allows you to handle the error without stopping the execution of your entire program.
-
+//if we dont get an error in try method it will never see in the catch method bcz we dont get an error...
 // Finally Block: (Optional) This block will run no matter what, whether an error was thrown or not. It's useful for cleanup tasks.
 
 // example
