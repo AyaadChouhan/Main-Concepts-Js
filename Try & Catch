@@ -1,1 +1,55 @@
- Try and Catch properties are helps us for Error Handling without blocking the thread of execution 
+//===============Try & Catch================
+
+// Structure...
+// The try...catch statement consists of two main blocks: try and catch. Optionally, there can also be a finally block.
+
+try {
+  // Code that may throw an error
+} catch (error) {
+  // Code to handle the error
+} finally {
+  // Code that will run regardless of the try/catch result
+}
+
+
+// if we have a main task of fetching data to the server and we know if url doesnt work it will block the code execution and throw the error and we have also some main tark below the fetch then comes (try and Catch) concep..
+
+try { // it is saved us to blocking our code a and saves us to the code blocking..
+    // if we do something here and it doesnt work and we know it will an error but we have catch method it says i will handle your error 
+
+  } catch (error) {
+    // Code to handle the error
+  } finally {
+    // Code that will run regardless of the try/catch result
+  }
+
+//   Explanation
+
+// Try Block: You put the code that might throw an error inside the try block. If everything works fine, the code in the catch block is skipped.
+
+// Catch Block: If an error occurs in the try block, the code inside the catch block runs. This allows you to handle the error without stopping the execution of your entire program.
+
+// Finally Block: (Optional) This block will run no matter what, whether an error was thrown or not. It's useful for cleanup tasks.
+
+// example
+
+async function prom(url) {
+    try {
+      let response =  fetch(url);// in this case async function have a bug im not using (await) keyword for resolve the promise bcz i want you to know how try & catch handles the error
+      let val =  response.text();
+      return val;
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+  prom("https://jsonplaceholder.typicode.com/users")
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+
+    console.log('im not blocked thread');
+
+Try and Catch properties are helps us for Error Handling without blocking the thread of execution 
