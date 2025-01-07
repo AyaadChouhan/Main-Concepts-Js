@@ -1,0 +1,24 @@
+// Global object....
+// The global object provides variables and functions that are available anywhere. 
+// By default, those that are built into the language or the environment.
+
+// In a browser, global functions and variables declared with var (not let/const!) become the property of the global object:
+var gVar = "global";
+console.log(window.gVar);
+
+//if we use Let instead of var keyword it will give an error (undefined)...
+//because let keyword is not allowd in global object....
+let language = "JS"
+console.log(window.language); 
+
+// If a data is so important that you’d like to make it available globally, write it directly as a property:
+// make current user information global, to let all scripts access it.
+window.userInfo = {
+    name : "ayaad",
+    faculty : "CS"
+}
+
+// or, if we have a local variable with the name "userInfo"
+// use window keyword berfore use..
+alert(window.userInfo.name); // ayaad
+
